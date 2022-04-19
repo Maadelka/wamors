@@ -1,0 +1,15 @@
+//- home
+<i class="fa-solid fa-house-chimney"></i>
+
+//- pesan kosong
+<i class="fa-solid fa-comment"></i>
+//- pesan berisi
+<i class="fa-solid fa-comment-lines"></i>
+
+//- setting titik3
+<i class="fa-solid fa-ellipsis-stroke-vertical"></i>
+
+//- bell kosong
+<i class="fa-solid fa-bell"></i>cle
+//- bell berisi
+<i class="fa-solid fa-bell-exclamation"></i>

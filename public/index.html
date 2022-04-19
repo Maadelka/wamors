@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../src/all.min.css">
+    <link rel="stylesheet" href="../src/fontawesome.min.css">
+    <link rel="stylesheet" href="../src/googlefonts.css">
+    <title>mobile app</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+<!-- -------------------------------------------------------------------------------------- navbar -->
+<!-- navnar 1 [bagian atas] -->
+<nav class="fixed w-full p-2 bg-slate-500 top-0 flex justify-between items-center z-40">
+    <h1 class="inline-block font-[Courgette] text-3xl text-slate-800 ">wamors</h1>
+    <div>
+        <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
+        <i onclick="eventBurgerMenu()" class="text-slate-50 fa-solid fa-bars fa-xl"></i>
+    </div>
+</nav>
+
+<!------------------------------------------ isi menu hamburger -->
+<div id="isiBurger" class="w-0 h-[100vh] absolute right-0 transition-all duration-200 bg-slate-700  overflow-hidden z-50">
+    <div class="flex w-full items-center border-slate-500 border-b-2">
+        <i onclick="colseBurger()" class="fa-solid fa-angles-left fa-2x m-2 mr-5"></i>
+        <p class="text-2xl font-semibold mb-1">menu</p>
+    </div>
+</div>
+
+
+<!-- navbar 2 [bagian bawah] -->
+<nav class="fixed w-full p-3 bg-slate-500 bottom-0 flex justify-between z-40">
+    <div><i class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
+    <div><i class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
+    <div><i class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
+    <div><i class="text-slate-50 fa-solid fa-user fa-xl"></i></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../src/main.js"></script>
+</body>
+</html>
