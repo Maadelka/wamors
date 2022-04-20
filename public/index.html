@@ -10,18 +10,14 @@
     <link rel="stylesheet" href="../src/googlefonts.css">
     <title>mobile app</title>
 </head>
-<body>
+<body class="h-[1000px] text-slate-200">
     
-
-
-
-
 
 
 <!-- -------------------------------------------------------------------------------------- navbar -->
 <!-- navnar 1 [bagian atas] -->
-<nav class="fixed w-full p-2 bg-slate-500 top-0 flex justify-between items-center z-40">
-    <h1 class="inline-block font-[Courgette] text-3xl text-slate-800 ">wamors</h1>
+<nav class="fixed w-full p-2 bg-slate-700  top-0 flex justify-between items-center z-40">
+    <h1 class="inline-block font-[Courgette] text-3xl text-slate-400 ">wamors</h1>
     <div>
         <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
         <i onclick="eventBurgerMenu()" class="text-slate-50 fa-solid fa-bars fa-xl"></i>
@@ -31,18 +27,17 @@
 <!------------------------------------------ isi menu hamburger -->
 <div id="isiBurger" class="w-0 h-[100vh] absolute right-0 transition-all duration-200 bg-slate-700  overflow-hidden z-50">
     <div class="flex w-full items-center border-slate-500 border-b-2">
-        <i onclick="colseBurger()" class="fa-solid fa-angles-left fa-2x m-2 mr-5"></i>
-        <p class="text-2xl font-semibold mb-1">menu</p>
+        <i onclick="colseBurger()" class="fa-solid fa-angles-left fa-2x m-2 mr-5 text-slate-50"></i>
+        <p class="text-[1.7rem] font-semibold text-slate-50 ">menu</p>
     </div>
 </div>
 
-
 <!-- navbar 2 [bagian bawah] -->
 <nav class="fixed w-full p-3 bg-slate-500 bottom-0 flex justify-between z-40">
-    <div><i class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
-    <div><i class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
-    <div><i class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
-    <div><i class="text-slate-50 fa-solid fa-user fa-xl"></i></div>
+    <div><i id="tombolHome" class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
+    <div><i id="tombolChat" class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
+    <div><i id="tombolNotif" class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
+    <div><i id="tombolProfile" class="text-slate-50 fa-solid fa-user fa-xl"></i></div>
 </nav>
 
 
@@ -61,6 +56,113 @@
 
 
 
+<div class="container w-full">
+    <!-- --------------------------------------------------------------------------------- home -->
+    <div id="home" class=" w-full bg-slate-300 min-h-max relative top-14" >
+
+
+
+
+        <!------------------------------------------------------------------------ card status -->
+        <div class="w-full border-2 bg-slate-700 ">
+            <!-- profile akun ,tanggal rilis , nama akun -->
+            <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
+                <!-- profile -->
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/3.jpg""></div>
+                <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
+                <!-- keterangan akun status,tanggal upload,nama akun -->
+                <div class="ml-[2px] flex flex-col justify-end">
+                    <p id="tanggalUpload" class="text-[.7rem] ">20/04/2022</p>
+                    <p id="nama" class="font-semibold text-lg">Andhika Rizaldi</p>
+                </div>
+                <!-- menu burger -->
+                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+            </div>
+            <!--status -->
+            <div class="w-full">
+                <!-- keterangan -->
+                <p>Lorem ipsum, dolor sit amet consectet exercitationem assumenda unde. Officia, facilis officiis odio quibustae debi</p>
+                <div class="w-full">
+                    <img src="assets/4.jpg">
+                </div>
+            </div>
+            <!-- like,coment,share -->
+            <div class="flex justify-between w-full">
+                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">132</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">73</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">52</span></i></p>
+            </div>
+        </div>
+        
+<!--  -->
+        <div class="w-full border-2 bg-slate-700 ">
+            <!-- profile akun ,tanggal rilis , nama akun -->
+            <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
+                <!-- profile -->
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/1.jpg""></div>
+                <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
+                <!-- keterangan akun status,tanggal upload,nama akun -->
+                <div class="ml-[2px] flex flex-col justify-end">
+                    <p id="tanggalUpload" class="text-[.7rem] ">12/03/2022</p>
+                    <p id="nama" class="font-semibold text-lg">Wahyu Saputri</p>
+                </div>
+                <!-- menu burger -->
+                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+            </div>
+            <!--status -->
+            <div class="w-full">
+                <!-- keterangan -->
+                <p>Lorem ipsutationem assucia, facilis officiis odio quibustae debi</p>
+                <div class="w-full">
+                    <img src="assets/5.jpg">
+                </div>
+            </div>
+            <!-- like,coment,share -->
+            <div class="flex justify-between w-full">
+                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">167</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">53</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">20</span></i></p>
+            </div>
+        </div>
+
+<!--  -->
+        <div class="w-full border-2 bg-slate-700 ">
+            <!-- profile akun ,tanggal rilis , nama akun -->
+            <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
+                <!-- profile -->
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/2.jpg""></div>
+                <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
+                <!-- keterangan akun status,tanggal upload,nama akun -->
+                <div class="ml-[2px] flex flex-col justify-end">
+                    <p id="tanggalUpload" class="text-[.7rem] ">03/02/2022</p>
+                    <p id="nama" class="font-semibold text-lg">Bambang Surtono</p>
+                </div>
+                <!-- menu burger -->
+                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+            </div>
+            <!--status -->
+            <div class="w-full">
+                <!-- keterangan -->
+                <p>Lorem ipsum, dolor sit amet consectetur asimilique commodi sit rerum tempore, ipsum laborum iure, dolor fugiat veritatis nemo doloribus magnam necessitatibus hafficiis. Corporis, reiciendis.</p>
+                <div class="w-full">
+                    <img src="assets/6.jpg">
+                </div>
+            </div>
+            <!-- like,coment,share -->
+            <div class="flex justify-between w-full">
+                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">72</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">43</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">12</span></i></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
 
 
 
@@ -72,6 +174,31 @@
 
 
 
-<script src="../src/main.js"></script>
+
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------------- chatting -->
+    <div id="chat" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
+        <h1 class="text-center py-20 text-xl">layout chatting</h1>
+    </div>
+
+    <!-- --------------------------------------------------------------------------- notifikasi -->
+    <div id="notif" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
+        <h1 class="text-center py-20 text-xl">layout nofitikasi</h1>
+    </div>
+
+    <!-- ------------------------------------------------------------------------- profile akun -->
+    <div id="profile" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
+        <h1 class="text-center py-20 text-xl">layout profile akun</h1>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>

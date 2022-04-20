@@ -13,3 +13,29 @@
 <i class="fa-solid fa-bell"></i>cle
 //- bell berisi
 <i class="fa-solid fa-bell-exclamation"></i>
+
+
+
+//------------------------------------------- card
+// like kosong
+<i class="fa-regular fa-heart"></i>
+//like berisi
+<i class="fa-regular fa-heart"></i>
+//komen
+<i class="fa-regular fa-comment-lines"></i>
+//share
+<i class="fa-regular fa-share-from-square"></i>
+
+
+
+
+
+
+
+
+//--------------------------------------- border radius
+// rounded corner options
+<div class="rounded ..."></div>
+<div class="rounded-md ..."></div>
+<div class="rounded-lg ..."></div>
+<div class="rounded-full ..."></div>
