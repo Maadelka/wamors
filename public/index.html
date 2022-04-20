@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../src/googlefonts.css">
     <title>mobile app</title>
 </head>
-<body class="h-[1000px] text-slate-200">
+<body class="h-[1390px] text-slate-200">
     
 
 
 <!-- -------------------------------------------------------------------------------------- navbar -->
 <!-- navnar 1 [bagian atas] -->
-<nav class="fixed w-full p-2 bg-slate-700  top-0 flex justify-between items-center z-40">
+<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40">
     <h1 class="inline-block font-[Courgette] text-3xl text-slate-400 ">wamors</h1>
     <div>
         <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
@@ -30,10 +30,13 @@
         <i onclick="colseBurger()" class="fa-solid fa-angles-left fa-2x m-2 mr-5 text-slate-50"></i>
         <p class="text-[1.7rem] font-semibold text-slate-50 ">menu</p>
     </div>
+
+
+    <p class="py-40 text-center">comming soon</p>
 </div>
 
 <!-- navbar 2 [bagian bawah] -->
-<nav class="fixed w-full p-3 bg-slate-500 bottom-0 flex justify-between z-40">
+<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40">
     <div><i id="tombolHome" class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
     <div><i id="tombolChat" class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
     <div><i id="tombolNotif" class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
@@ -58,13 +61,13 @@
 
 <div class="container w-full">
     <!-- --------------------------------------------------------------------------------- home -->
-    <div id="home" class=" w-full bg-slate-300 min-h-max relative top-14" >
+    <div id="home" class=" w-full min-h-max relative top-14" >
 
 
 
 
         <!------------------------------------------------------------------------ card status -->
-        <div class="w-full border-2 bg-slate-700 ">
+        <div class="w-full bg-slate-700 mb-[2px]">
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
@@ -88,14 +91,16 @@
             </div>
             <!-- like,coment,share -->
             <div class="flex justify-between w-full">
-                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">132</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">73</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">52</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl text-red-300"><span class="text-xs ml-[2px] text-slate-300">132</span></i></p>
+
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">73</span></i></p>
+
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">52</span></i></p>
             </div>
         </div>
         
 <!--  -->
-        <div class="w-full border-2 bg-slate-700 ">
+        <div class="w-full bg-slate-700 mb-[2px]">
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
@@ -119,14 +124,14 @@
             </div>
             <!-- like,coment,share -->
             <div class="flex justify-between w-full">
-                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">167</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">53</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">20</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl text-red-300"><span class="text-xs ml-[2px] text-slate-300">167</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">53</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">20</span></i></p>
             </div>
         </div>
 
 <!--  -->
-        <div class="w-full border-2 bg-slate-700 ">
+        <div class="w-full  bg-slate-700 ">
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
@@ -150,9 +155,9 @@
             </div>
             <!-- like,coment,share -->
             <div class="flex justify-between w-full">
-                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl"><span class="text-sm ml-[2px]">72</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-sm ml-[2px]">43</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl"><span class="ml-[2px] text-sm">12</span></i></p>
+                <p class=" py-[3px] px-3 "><i class="fa-regular fa-heart fa-xl text-red-300 "><span class="text-xs ml-[2px] text-slate-300">72</span></i></p>
+                <p class=" py-[3px] px-3 "><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">43</span></i></p>
+                <p class=" py-[3px] px-3 "><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">12</span></i></p>
             </div>
         </div>
 
