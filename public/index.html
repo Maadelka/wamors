@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="../src/all.min.css">
     <link rel="stylesheet" href="../src/fontawesome.min.css">
     <link rel="stylesheet" href="../src/googlefonts.css">
+    <link rel="stylesheet" href="../src/mystyle.css">
     <title>mobile app</title>
 </head>
-<body class="h-[1390px] text-slate-200">
+<body class="h-[1390px] text-slate-200 select-none">
     
 
 
 <!-- -------------------------------------------------------------------------------------- navbar -->
 <!-- navnar 1 [bagian atas] -->
-<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40">
+<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40 shadow-md">
     <h1 class="inline-block font-[Courgette] text-3xl text-slate-400 ">wamors</h1>
     <div>
         <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
@@ -71,7 +72,7 @@
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
-                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/3.jpg""></div>
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/3.jpg""></div>
                 <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
                 <!-- keterangan akun status,tanggal upload,nama akun -->
                 <div class="ml-[2px] flex flex-col justify-end">
@@ -79,8 +80,21 @@
                     <p id="nama" class="font-semibold text-lg">Andhika Rizaldi</p>
                 </div>
                 <!-- menu burger -->
-                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <!-- menu setting status -->
+                <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
+                    <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
+                </div>
+
+                <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-3 fa-xl text-blue-300"></i>
             </div>
+
+
+
             <!--status -->
             <div class="w-full">
                 <!-- keterangan -->
@@ -98,13 +112,24 @@
                 <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">52</span></i></p>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         
 <!--  -->
         <div class="w-full bg-slate-700 mb-[2px]">
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
-                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/1.jpg""></div>
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/1.jpg""></div>
                 <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
                 <!-- keterangan akun status,tanggal upload,nama akun -->
                 <div class="ml-[2px] flex flex-col justify-end">
@@ -112,7 +137,17 @@
                     <p id="nama" class="font-semibold text-lg">Wahyu Saputri</p>
                 </div>
                 <!-- menu burger -->
-                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <!-- menu setting status -->
+                <div  class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
+                    <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
+                </div>
+
+                <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-3 fa-xl text-blue-300"></i>
             </div>
             <!--status -->
             <div class="w-full">
@@ -135,15 +170,25 @@
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
-                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 "><img src="assets/2.jpg""></div>
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/2.jpg""></div>
                 <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
                 <!-- keterangan akun status,tanggal upload,nama akun -->
                 <div class="ml-[2px] flex flex-col justify-end">
                     <p id="tanggalUpload" class="text-[.7rem] ">03/02/2022</p>
                     <p id="nama" class="font-semibold text-lg">Bambang Surtono</p>
                 </div>
-                <!-- menu burger -->
-                <div class="absolute right-0 p-2 h-full flex items-center"><i class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                 <!-- menu burger -->
+                 <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                 <!-- menu setting status -->
+                 <div class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
+                     <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
+                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
+                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
+                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
+                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
+                 </div>
+ 
+                 <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-3 fa-xl text-blue-300"></i>
             </div>
             <!--status -->
             <div class="w-full">
@@ -154,12 +199,13 @@
                 </div>
             </div>
             <!-- like,coment,share -->
-            <div class="flex justify-between w-full">
+            <div class="flex justify-between w-full relative">
                 <p class=" py-[3px] px-3 "><i class="fa-regular fa-heart fa-xl text-red-300 "><span class="text-xs ml-[2px] text-slate-300">72</span></i></p>
                 <p class=" py-[3px] px-3 "><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">43</span></i></p>
                 <p class=" py-[3px] px-3 "><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">12</span></i></p>
             </div>
         </div>
+
 
 
 

@@ -29,6 +29,41 @@
 
 
 
+//-- bookmark
+
+//--- edit
+<i class="fa-solid fa-pen-to-square"></i>
+
+//-- remove
+<i class="fa-solid fa-circle-trash"></i>
+
+//-- of notif
+<i class="fa-regular fa-bell-on"></i>
+//-- on notif
+<i class="fa-solid fa-bell-on"></i>
+
+//- tautan
+<i class="fa-solid fa-link"></i>
+
+// -- report
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
