@@ -542,6 +542,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: -0.75rem;
 }
 
+.right-\[4px\] {
+  right: 4px;
+}
+
+.-bottom-2 {
+  bottom: -0.5rem;
+}
+
+.-bottom-4 {
+  bottom: -1rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -552,6 +564,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .m-2 {
   margin: 0.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mr-4 {
@@ -568,6 +585,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-\[2px\] {
   margin-left: 2px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .inline-block {
@@ -602,6 +623,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .min-h-max {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
@@ -624,32 +649,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.5rem;
 }
 
-.w-11\/12 {
-  width: 91.666667%;
+.w-\[97\%\] {
+  width: 97%;
 }
 
 .w-\[90\%\] {
   width: 90%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
-.w-\[95\%\] {
-  width: 95%;
-}
-
-.w-\[98\%\] {
-  width: 98%;
-}
-
-.w-\[96\%\] {
-  width: 96%;
-}
-
-.w-\[97\%\] {
-  width: 97%;
 }
 
 .select-none {
@@ -754,12 +759,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-40 {
@@ -790,6 +804,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pr-3 {
@@ -874,6 +893,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .shadow-md {

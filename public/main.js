@@ -38,9 +38,35 @@ tombolMenuSettingStatus.addEventListener('click',function(){
     tmsi.classList.toggle('fa-xmark')
 })
 
-
+// --------------------------- bookmark
 function boolmarkT (e){
     e.classList.toggle('text-blue-300')
     e.classList.toggle('text-blue-700')
     e.classList.toggle('shadow-md')
 }
+
+
+// ------------------------------- like
+let like=document.getElementById('like')
+let likeNum=document.getElementById('likeNum')
+like.addEventListener('click',function(){
+    like.classList.toggle('fa-regular')
+    like.classList.toggle('fa-solid')
+    like.classList.toggle('text-red-300')
+    like.classList.toggle('text-red-600')
+    likeNum.innerHTML ++
+})
+
+
+// ------------------ komenter
+let closeKomentar=document.getElementById('closeKomentar')
+let tombolKomener=document.getElementById('tombolKomener')
+let kolomKomentar=document.getElementById('kolomKomentar')
+tombolKomener.addEventListener('click',function(){
+    kolomKomentar.classList.toggle('hidden')
+    kolomKomentar.classList.toggle('fixed')
+})
+closeKomentar.addEventListener('click',function(){
+    kolomKomentar.classList.toggle('hidden')
+    kolomKomentar.classList.toggle('fixed')
+})
