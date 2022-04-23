@@ -17,7 +17,7 @@
 
 <!-- -------------------------------------------------------------------------------------- navbar -->
 <!-- navnar 1 [bagian atas] -->
-<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40 shadow-md">
+<nav id="navAtas" class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40 shadow-md tablet:hidden">
     <h1 class="inline-block font-[Courgette] text-3xl text-slate-400 ">wamors</h1>
     <div>
         <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
@@ -37,11 +37,15 @@
 </div>
 
 <!-- navbar 2 [bagian bawah] -->
-<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40">
+<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40 tablet:hidden">
+    <!-- home -->
     <div><i id="tombolHome" class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
-    <div><i id="tombolChat" class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
-    <div><i id="tombolNotif" class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
-    <div><i id="tombolProfile" class="text-slate-50 fa-solid fa-user fa-xl"></i></div>
+    <!-- chatting -->
+    <div><i id="tombolChat" class="text-slate-400 fa-solid fa-comment fa-xl"></i></div>
+    <!-- notif -->
+    <div><i id="tombolNotif" class="text-slate-400 fa-solid fa-bell fa-xl"></i></div>
+    <!-- profile -->
+    <div><i id="tombolProfile" class="text-slate-400 fa-solid fa-user fa-xl"></i></div>
 </nav>
 
 
@@ -52,15 +56,7 @@
 
 
 
-
-
-
-
-
-
-
-
-<div class="container w-full">
+<div class="container w-full tablet:hidden">
     <!-- --------------------------------------------------------------------------------- home -->
     <div id="home" class=" w-full min-h-max relative top-14" >
 
@@ -83,8 +79,8 @@
                 <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
                 <!-- menu setting status -->
                 <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
-                    <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bookmark pr-3 py-3"></i>simpan post</p>
-                    <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bookmark"></i>simpan post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bell"></i>aktifkan notifikasi</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
@@ -93,10 +89,7 @@
 
                 <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-4 fa-md text-blue-300"></i>
             </div>
-
-
-
-            <!--status -->
+            <!--------------------------------------status -->
             <div class="w-full">
                 <!-- keterangan -->
                 <p class="inline-block w-[97%] mb-[2px]">Lorem ipsum, dolor sit amet consectet exercitationem assumenda unde. Officia, facilis officiis odio quibustae debi</p>
@@ -115,14 +108,7 @@
         </div>
 
 
-
-
-
-
-
-
-
-
+        
 
         
 <!--  -->
@@ -209,19 +195,11 @@
 
 
 
-
-
-
-
-
         <!-- --------------------- layout komentar -->
         <div id="kolomKomentar" class=" w-full h-1/2 hidden bottom-0 bg-slate-700 ">
             <i id="closeKomentar" class="fa-solid fa-xmark absolute top-0 right-0 fa-xl "></i>
             <p class="text-center py-20">kolom komentar,,, coming soon</p>
         </div>
-
-
-
 
 
     </div>
@@ -230,25 +208,31 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+<!-- <p><i class="fa-solid fa-magnifying-glass fa-xl"></i></p> -->
 
 
 
 
 
     <!-- ----------------------------------------------------------------------------- chatting -->
-    <div id="chat" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
-        <h1 class="text-center py-20 text-xl">layout chatting</h1>
+    <div id="chat" class="hidden w-full relative bg-slate-700" >
+        <!-- judul chatting -->
+        <div class="w-full flex justify-between p-2 border-b-[1px] border-slate-400">
+            <p class="inline-block font-semibold text-xl">chatting</p>
+            <p><i class="fa-solid fa-gear fa-xl inline-block"></i></p> 
+        </div>
+
+        <p class="text-center py-40 text-xl">coming soon</p>
+        <!-- icon profile friend chatting-->
+        <!-- <div class="w-full h-40 "></div> -->
     </div>
+
+
+
+
+
+
+
 
     <!-- --------------------------------------------------------------------------- notifikasi -->
     <div id="notif" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
@@ -262,6 +246,10 @@
 
 </div>
 
+
+
+
+<p class="text-center py-60 text-xl hidden tablet:block "">Mobile only!! <br>  tablet and dekstop coming soon :) <br></p>
 <script src="main.js"></script>
 </body>
 </html>
