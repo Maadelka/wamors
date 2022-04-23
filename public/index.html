@@ -17,7 +17,7 @@
 
 <!-- -------------------------------------------------------------------------------------- navbar -->
 <!-- navnar 1 [bagian atas] -->
-<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40 shadow-md">
+<nav class="bg-slate-700 fixed w-full p-2 top-0 flex justify-between items-center z-40 shadow-md tablet:hidden">
     <h1 class="inline-block font-[Courgette] text-3xl text-slate-400 ">wamors</h1>
     <div>
         <i class="text-slate-50 fa-solid fa-plus fa-xl mr-4"></i>
@@ -37,7 +37,7 @@
 </div>
 
 <!-- navbar 2 [bagian bawah] -->
-<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40">
+<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40 tablet:hidden">
     <div><i id="tombolHome" class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
     <div><i id="tombolChat" class="text-slate-50 fa-solid fa-comment fa-xl"></i></div>
     <div><i id="tombolNotif" class="text-slate-50 fa-solid fa-bell fa-xl"></i></div>
@@ -60,7 +60,7 @@
 
 
 
-<div class="container w-full">
+<div class="container w-full tablet:hidden">
     <!-- --------------------------------------------------------------------------------- home -->
     <div id="home" class=" w-full min-h-max relative top-14" >
 
@@ -262,6 +262,15 @@
 
 </div>
 
+
+
+
+
+
+
+
+
+<p class="text-center py-60 text-xl hidden tablet:block "">Mobile only!! <br>  tablet and dekstop coming soon :) <br></p>
 <script src="main.js"></script>
 </body>
 </html>
