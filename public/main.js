@@ -1,5 +1,11 @@
 document.body.style.backgroundColor="black";
 
+// ------------------------------------------------ icon pindah halaman home,chat,notif,profile
+let home=document.getElementById('home'),
+    chat=document.getElementById('chat'),
+    notif=document.getElementById('notif'),
+    profile=document.getElementById('profile')
+
 
 
 // ------------------------------------------------- hamburger menu
@@ -15,11 +21,6 @@ function colseBurger (){
 }
 
 
-// ------------------------------------------------ icon pindah halaman home,chat,notif,profile
-let home=document.getElementById('home'),
-    chat=document.getElementById('chat'),
-    notif=document.getElementById('notif'),
-    profile=document.getElementById('profile')
 
 notif.addEventListener('click',function(){
     alert('asw')
@@ -70,3 +71,29 @@ closeKomentar.addEventListener('click',function(){
     kolomKomentar.classList.toggle('hidden')
     kolomKomentar.classList.toggle('fixed')
 })
+
+
+// ---------------------------------------------------------------- home
+let tombolChat=document.getElementById('tombolChat');
+let tombolHome=document.getElementById('tombolHome');
+tombolHome.addEventListener('click',function(){
+    home.classList.remove('hidden')
+    tombolHome.classList.remove('text-slate-400')
+    tombolHome.classList.add('text-slate-50')
+    tombolChat.classList.add('text-slate-400')
+    tombolChat.classList.remove('text-slate-50')
+    navAtas.classList.remove('hidden')
+});
+
+
+// ---------------------------------------------------------------- chatting
+let navAtas=document.getElementById('navAtas');
+tombolChat.addEventListener('click',function(){
+    home.classList.add('hidden')
+    chat.classList.remove('hidden')
+    tombolHome.classList.add('text-slate-400')
+    tombolHome.classList.remove('text-slate-50')
+    tombolChat.classList.remove('text-slate-400')
+    tombolChat.classList.add('text-slate-50')
+    navAtas.classList.add('hidden')
+});
