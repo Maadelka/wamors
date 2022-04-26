@@ -20,11 +20,14 @@ function colseBurger (){
     isiBurger.classList.remove('w-full') 
 }
 
+// notif.addEventListener('click',function(){
+//     alert('asw')
+// })
 
 
-notif.addEventListener('click',function(){
-    alert('asw')
-})
+
+
+
 
 
 // -------------------- menu setting status
@@ -38,6 +41,33 @@ tombolMenuSettingStatus.addEventListener('click',function(){
     tmsi.classList.toggle('fa-ellipsis-vertical')
     tmsi.classList.toggle('fa-xmark')
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // --------------------------- bookmark
 function boolmarkT (e){
@@ -63,14 +93,29 @@ like.addEventListener('click',function(){
 let closeKomentar=document.getElementById('closeKomentar')
 let tombolKomener=document.getElementById('tombolKomener')
 let kolomKomentar=document.getElementById('kolomKomentar')
+let navBawah = document.getElementById('navBawah')
 tombolKomener.addEventListener('click',function(){
     kolomKomentar.classList.toggle('hidden')
     kolomKomentar.classList.toggle('fixed')
+    navBawah.classList.toggle('fixed')
+    navBawah.classList.toggle('hidden')
 })
 closeKomentar.addEventListener('click',function(){
     kolomKomentar.classList.toggle('hidden')
     kolomKomentar.classList.toggle('fixed')
+    navBawah.classList.toggle('fixed')
+    navBawah.classList.toggle('hidden')
 })
+
+
+
+
+
+
+
+
+
+
 
 
 // ---------------------------------------------------------------- home

@@ -5,6 +5,9 @@ module.exports = {
       colors:{
         'gray-trans':'#373737a9',
       },
+      boxShadow: {
+        'tl': '0 5px 3px rgba(0, 0, 0, 0.3)',
+      },
     },
     screens: {
       'tablet': '640px',

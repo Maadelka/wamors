@@ -37,7 +37,7 @@
 </div>
 
 <!-- navbar 2 [bagian bawah] -->
-<nav class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40 tablet:hidden">
+<nav id="navBawah" class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40 tablet:hidden">
     <!-- home -->
     <div><i id="tombolHome" class="text-slate-50 fa-solid fa-house-chimney fa-xl"></i></div>
     <!-- chatting -->
@@ -75,8 +75,12 @@
                     <p id="tanggalUpload" class="text-[.7rem] ">20/04/2022</p>
                     <p id="nama" class="font-semibold text-lg">Andhika Rizaldi</p>
                 </div>
+
+
                 <!-- menu burger -->
-                <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <div id="tombolMenuSettingStatus" class=" absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+
+
                 <!-- menu setting status -->
                 <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bookmark"></i>simpan post</p>
@@ -86,7 +90,55 @@
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
                 </div>
+                <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-4 fa-md text-blue-300"></i>
+            </div>
+            <!--------------------------------------status -->
+            <div class="w-full">
+                <!-- keterangan -->
+                <p class="inline-block w-[97%] mb-[2px]">Lorem ipsum, dolor sit amet consectet exercitationem assumenda unde. Officia, facilis officiis odio quibustae debi</p>
+                <div class="w-full">
+                    <img src="assets/4.jpg">
+                </div>
+            </div>
+            <!-- like,coment,share -->
+            <div class="flex justify-between w-full">
+                <p class=" py-[3px] px-3  rounded-md"><i id="like"  class="fa-regular fa-heart fa-xl text-red-300"><span id="likeNum" class="text-xs ml-[2px] text-slate-300">132</span></i></p>
 
+                <p class=" py-[3px] px-3  rounded-md"><i id="tombolKomener" class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">73</span></i></p>
+
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">52</span></i></p>
+            </div>
+        </div>
+
+
+
+
+
+        <!------------------------------------------------------------------------ card status -->
+        <div class="w-full bg-slate-700 mb-[2px]">
+            <!-- profile akun ,tanggal rilis , nama akun -->
+            <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
+                <!-- profile -->
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/3.jpg""></div>
+                <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
+                <!-- keterangan akun status,tanggal upload,nama akun -->
+                <div class="ml-[2px] flex flex-col justify-end">
+                    <p id="tanggalUpload" class="text-[.7rem] ">20/04/2022</p>
+                    <p id="nama" class="font-semibold text-lg">Andhika Rizaldi</p>
+                </div>
+
+                <!-- menu burger -->
+                <div  class="tombolMenuSettingStatus absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+
+                <!-- menu setting status -->
+                <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bookmark"></i>simpan post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bell"></i>aktifkan notifikasi</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
+                </div>
                 <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-4 fa-md text-blue-300"></i>
             </div>
             <!--------------------------------------status -->
@@ -109,106 +161,109 @@
 
 
         
-
-        
-<!--  -->
+        <!------------------------------------------------------------------------ card status -->
         <div class="w-full bg-slate-700 mb-[2px]">
             <!-- profile akun ,tanggal rilis , nama akun -->
             <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
                 <!-- profile -->
-                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/1.jpg""></div>
+                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/3.jpg""></div>
                 <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
                 <!-- keterangan akun status,tanggal upload,nama akun -->
                 <div class="ml-[2px] flex flex-col justify-end">
-                    <p id="tanggalUpload" class="text-[.7rem] ">12/03/2022</p>
-                    <p id="nama" class="font-semibold text-lg">Wahyu Saputri</p>
+                    <p id="tanggalUpload" class="text-[.7rem] ">20/04/2022</p>
+                    <p id="nama" class="font-semibold text-lg">Andhika Rizaldi</p>
                 </div>
+
                 <!-- menu burger -->
-                <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+                <div  class="tombolMenuSettingStatus absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
+
                 <!-- menu setting status -->
-                <div  class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
-                    <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
+                <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bookmark"></i>simpan post</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bell"></i>aktifkan notifikasi</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
                 </div>
-
-                <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-3 fa-xl text-blue-300"></i>
+                <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-4 fa-md text-blue-300"></i>
             </div>
-            <!--status -->
+            <!--------------------------------------status -->
             <div class="w-full">
                 <!-- keterangan -->
-                <p class="inline-block w-[97%]">enak bet pakai tailwind css njir ,,, tinggal sat set sat set ,, jadi ,,,:v shat lah ,join lah  cuy <span class="text-blue-700 select-text">github.com/maadelka/wamors</span></p>
+                <p class="inline-block w-[97%] mb-[2px]">Lorem ipsum, dolor sit amet consectet exercitationem assumenda unde. Officia, facilis officiis odio quibustae debi</p>
                 <div class="w-full">
-                    <img src="assets/5.jpg">
+                    <img src="assets/4.jpg">
                 </div>
             </div>
             <!-- like,coment,share -->
             <div class="flex justify-between w-full">
-                <p class=" py-[3px] px-3  rounded-md"><i class="fa-regular fa-heart fa-xl text-red-300"><span class="text-xs ml-[2px] text-slate-300">167</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">53</span></i></p>
-                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">20</span></i></p>
+                <p class=" py-[3px] px-3  rounded-md"><i id="like"  class="fa-regular fa-heart fa-xl text-red-300"><span id="likeNum" class="text-xs ml-[2px] text-slate-300">132</span></i></p>
+
+                <p class=" py-[3px] px-3  rounded-md"><i id="tombolKomener" class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">73</span></i></p>
+
+                <p class=" py-[3px] px-3  rounded-md"><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">52</span></i></p>
             </div>
         </div>
-
-<!--  -->
-        <div class="w-full  bg-slate-700 ">
-            <!-- profile akun ,tanggal rilis , nama akun -->
-            <div class="w-full flex relative  border-slate-500 border-b-[1px] py-2 ">
-                <!-- profile -->
-                <div class="w-12 h-12 overflow-hidden rounded-2xl border-blue-400 border-2 shadow-md"><img src="assets/2.jpg""></div>
-                <div id="statusAktif" class="rounded-full w-2 h-2 border-slate-600 border-[1px] bg-amber-200"></div>
-                <!-- keterangan akun status,tanggal upload,nama akun -->
-                <div class="ml-[2px] flex flex-col justify-end">
-                    <p id="tanggalUpload" class="text-[.7rem] ">03/02/2022</p>
-                    <p id="nama" class="font-semibold text-lg">Bambang Surtono</p>
-                </div>
-                 <!-- menu burger -->
-                 <div id="tombolMenuSettingStatus" class="absolute right-0 p-2 h-full flex items-center"><i id="tmsi" class="fa-solid fa-ellipsis-vertical  fa-xl"></i></div>
-                 <!-- menu setting status -->
-                 <div class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
-                     <p class="border-b-[1px] border-stone-600"><i class="fa-solid fa-bell pr-3 py-3"></i>aktifkan notifikasi</p>
-                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
-                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
-                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
-                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-triangle-exclamation"></i>report</p>
-                 </div>
- 
-                 <i id="bookmark" onclick="boolmarkT(this)" class="fa-solid fa-bookmark absolute right-[3px] -bottom-3 fa-xl text-blue-300"></i>
-            </div>
-            <!--status -->
-            <div class="w-full">
-                <!-- keterangan -->
-                <p class="inline-block w-[97%]">Lorem ipsum, dolor sit amet consectetur asimilique commodi sit rerum tempore, ipsum laborum iure, dolor fugiat veritatis nemo doloribus magnam necessitatibus hafficiis. Corporis, reiciendis.</p>
-                <div class="w-full">
-                    <img src="assets/6.jpg">
-                </div>
-            </div>
-            <!-- like,coment,share -->
-            <div class="flex justify-between w-full relative">
-                <p class=" py-[3px] px-3 "><i class="fa-regular fa-heart fa-xl text-red-300 "><span class="text-xs ml-[2px] text-slate-300">72</span></i></p>
-                <p class=" py-[3px] px-3 "><i class=" fa-regular fa-comment fa-xl"><span class="text-xs ml-[2px] text-slate-300">43</span></i></p>
-                <p class=" py-[3px] px-3 "><i class=" fa-regular fa-share-from-square fa-xl text-sky-300"><span class="ml-[2px] text-xs text-slate-300">12</span></i></p>
-            </div>
-        </div>
-
-
 
         <!-- --------------------- layout komentar -->
-        <div id="kolomKomentar" class=" w-full h-1/2 hidden bottom-0 bg-slate-700 ">
-            <i id="closeKomentar" class="fa-solid fa-xmark absolute top-0 right-0 fa-xl "></i>
-            <p class="text-center py-20">kolom komentar,,, coming soon</p>
-        </div>
+        <div id="kolomKomentar" class=" w-full h-[60vh] hidden bottom-0 bg-slate-700 ">
+            <p class="p-[5px] border-b-[1px]">Postingan : <span>Andhika Rizaldi</span></p>
+            <i id="closeKomentar" class="fa-solid fa-xmark absolute top-0 right-2 fa-2x "></i>
+            <p class="text-right p-[2px]">filter <i class="fa-solid fa-arrow-down-wide-short"></i></p>
 
+            <div class="mx-auto w-[95%] h-full overflow-y-scroll">
+
+                <!----------------------------------------------------------------- komentar user-->
+                <div class="w-full flex mb-2 relative">
+                    <div class="w-[14%]">
+                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <div class="w-[86%]">
+                        <p class="text-lg ">squidward <span class="text-[.7rem]">26/04/2022</span></p>
+                        <!-- isi komentar -->
+                        <div class="w-full bg-slate-600 p-2 rounded-md">
+                            <p>Lorem ipsum dolor sit amet is soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- komentar user-->
+                <div class="w-full flex mb-2">
+                    <div class="w-[14%]">
+                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
+                    </div>
+                    
+                    <div class="w-[86%]">
+                        <p class="text-lg ">squidward <span class="text-sm">26/04/2022</span></p>
+                        <!-- isi komentar -->
+                        <div class="w-full bg-slate-600 p-2 rounded-md">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat non ipsum fugit dolorem eligendi amet ab unde, dolores quo officiis soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- komentar user-->
+                <div class="w-full flex mb-2">
+                    <div class="w-[14%]">
+                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
+                    </div>
+                    
+                    <div class="w-[86%]">
+                        <p class="text-lg ">squidward <span class="text-sm">26/04/2022</span></p>
+                        <!-- isi komentar -->
+                        <div class="w-full bg-slate-600 p-2 rounded-md">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat non ipsum fugit dolorem eligendi ametcates.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 <!---------- end home  -->
-
-
-
-
-
 
 
 
@@ -536,12 +591,6 @@
 
     </div>
 <!-- -- end chatting -->
-
-
-
-
-
-
 
 
 
