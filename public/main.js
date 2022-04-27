@@ -142,3 +142,24 @@ tombolChat.addEventListener('click',function(){
     tombolChat.classList.add('text-slate-50')
     navAtas.classList.add('hidden')
 });
+
+
+
+
+// ------------------------- burger coment
+let burgerComent=document.getElementById('burgerComent')
+let isiBurgerComent=document.getElementById('isiBurgerComent')
+burgerComent.addEventListener('click',function(){
+    burgerComent.classList.toggle('fa-xmark')
+    burgerComent.classList.toggle('fa-ellipsis')
+    isiBurgerComent.classList.toggle('flex')
+    isiBurgerComent.classList.toggle('hidden')
+    
+})
+
+let likeComent=document.getElementById('likeComent')
+let jumlahLikeComent=document.getElementById('jumlahLikeComent')
+likeComent.addEventListener('click',function(){
+    likeComent.classList.toggle('text-blue-700')
+    jumlahLikeComent.innerHTML++
+})

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../src/googlefonts.css">
     <link rel="stylesheet" href="../src/mystyle.css">
     <title>mobile app</title>
+    <style>
+        .layout-comentar{
+            box-shadow: 0 -1px 2px 1px rgba(11, 3, 52, 0.749);
+        }
+    </style>
 </head>
 <body class="h-[1390px] text-slate-200 select-none">
     
@@ -85,6 +90,7 @@
                 <div id="menuSettingStatus1" class=" absolute right-7 bg-slate-800 p-3 rounded-md hidden shadow-md">
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bookmark"></i>simpan post</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-bell"></i>aktifkan notifikasi</p>
+                    <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-comment-dots"></i>chat pribadi</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-pen-to-square"></i>edit status</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-eye-low-vision"></i>hidden post</p>
                     <p class="border-b-[1px] border-stone-600"><i class="pr-3 py-3 fa-solid fa-link"></i>bagikan url</p>
@@ -207,7 +213,7 @@
         </div>
 
         <!-- --------------------- layout komentar -->
-        <div id="kolomKomentar" class=" w-full h-[60vh] hidden bottom-0 bg-slate-700 ">
+        <div id="kolomKomentar" class="layout-comentar w-full h-[60vh] hidden bottom-0 bg-slate-700 ">
             <p class="p-[5px] border-b-[1px]">Postingan : <span>Andhika Rizaldi</span></p>
             <i id="closeKomentar" class="fa-solid fa-xmark absolute top-0 right-2 fa-2x "></i>
             <p class="text-right p-[2px]">filter <i class="fa-solid fa-arrow-down-wide-short"></i></p>
@@ -219,45 +225,122 @@
                     <div class="w-[14%]">
                         <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
                     </div>
-                    <i class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <i id="burgerComent" class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <!-- ,menubar komentar -->
+                    <div id="isiBurgerComent" class="absolute right-6 top-4 hidden flex-col bg-slate-800 p-2 rounded-md">
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-thumbs-up"></i> like</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-comment-dots"></i> chat pribadi</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-eye-low-vision"></i> sembunyikan</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-triangle-exclamation"></i> laporkan</p>
+                    </div>
+
+
                     <div class="w-[86%]">
                         <p class="text-lg ">squidward <span class="text-[.7rem]">26/04/2022</span></p>
                         <!-- isi komentar -->
-                        <div class="w-full bg-slate-600 p-2 rounded-md">
+                        <div class="w-full bg-slate-600 p-2 rounded-md mb-7">
                             <p>Lorem ipsum dolor sit amet is soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores.</p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- komentar user-->
-                <div class="w-full flex mb-2">
-                    <div class="w-[14%]">
-                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
-                    </div>
-                    
-                    <div class="w-[86%]">
-                        <p class="text-lg ">squidward <span class="text-sm">26/04/2022</span></p>
-                        <!-- isi komentar -->
-                        <div class="w-full bg-slate-600 p-2 rounded-md">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat non ipsum fugit dolorem eligendi amet ab unde, dolores quo officiis soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores.</p>
+                        <!-- like & balas -->
+                        <div class="absolute bottom-0 left-14 flex">
+                            <p class="mr-14"><i id="likeComent" class=" fa-solid fa-thumbs-up fa-lg"></i><span id="jumlahLikeComent" class="text-xs"></span></p>
+                            <p>balas</p>
                         </div>
                     </div>
                 </div>
+                <!-- end -->
 
-                <!-- komentar user-->
-                <div class="w-full flex mb-2">
+
+                <!----------------------------------------------------------------- komentar user-->
+                <div class="w-full flex mb-2 relative">
                     <div class="w-[14%]">
                         <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
                     </div>
-                    
+                    <i id="burgerComent" class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <!-- ,menubar komentar -->
+                    <div id="isiBurgerComent" class="absolute right-6 top-4 hidden flex-col bg-slate-800 p-2 rounded-md">
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-thumbs-up"></i> like</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-comment-dots"></i> chat pribadi</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-eye-low-vision"></i> sembunyikan</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-triangle-exclamation"></i> laporkan</p>
+                    </div>
+
+
                     <div class="w-[86%]">
-                        <p class="text-lg ">squidward <span class="text-sm">26/04/2022</span></p>
+                        <p class="text-lg ">squidward <span class="text-[.7rem]">26/04/2022</span></p>
                         <!-- isi komentar -->
-                        <div class="w-full bg-slate-600 p-2 rounded-md">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat non ipsum fugit dolorem eligendi ametcates.</p>
+                        <div class="w-full bg-slate-600 p-2 rounded-md mb-7">
+                            <p>Lorem ipsum dolor sit amet is soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio!.</p>
+                        </div>
+                        <!-- like & balas -->
+                        <div class="absolute bottom-0 left-14 flex">
+                            <p class="mr-14"><i id="likeComent" class=" fa-solid fa-thumbs-up fa-lg"></i><span id="jumlahLikeComent" class="text-xs"></span></p>
+                            <p>balas</p>
                         </div>
                     </div>
                 </div>
+                <!-- end -->
+
+
+                <!----------------------------------------------------------------- komentar user-->
+                <div class="w-full flex mb-2 relative">
+                    <div class="w-[14%]">
+                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
+                    </div>
+                    <i id="burgerComent" class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <!-- ,menubar komentar -->
+                    <div id="isiBurgerComent" class="absolute right-6 top-4 hidden flex-col bg-slate-800 p-2 rounded-md">
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-thumbs-up"></i> like</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-comment-dots"></i> chat pribadi</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-eye-low-vision"></i> sembunyikan</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-triangle-exclamation"></i> laporkan</p>
+                    </div>
+
+
+                    <div class="w-[86%]">
+                        <p class="text-lg ">squidward <span class="text-[.7rem]">26/04/2022</span></p>
+                        <!-- isi komentar -->
+                        <div class="w-full bg-slate-600 p-2 rounded-md mb-7">
+                            <p>Lorem ipsum dolor sit abitis laudantium obcaecati asperiores.</p>
+                        </div>
+                        <!-- like & balas -->
+                        <div class="absolute bottom-0 left-14 flex">
+                            <p class="mr-14"><i id="likeComent" class=" fa-solid fa-thumbs-up fa-lg"></i><span id="jumlahLikeComent" class="text-xs"></span></p>
+                            <p>balas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+                <!----------------------------------------------------------------- komentar user-->
+                <div class="w-full flex mb-2 relative ">
+                    <div class="w-[14%]">
+                        <div class="w-10 h-10 bg-black rounded-full overflow-hidden "><img src="assets/1.jpg" alt=""></div>
+                    </div>
+                    <i id="burgerComent" class="fa-solid fa-ellipsis absolute right-0 top-5 fa-lg"></i>
+                    <!-- ,menubar komentar -->
+                    <div id="isiBurgerComent" class="absolute right-6 top-4 hidden flex-col bg-slate-800 p-2 rounded-md">
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-thumbs-up"></i> like</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-comment-dots"></i> chat pribadi</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-eye-low-vision"></i> sembunyikan</p>
+                        <p class="mb-2 border-b-[1px] border-stone-600"><i class=" fa-solid fa-triangle-exclamation"></i> laporkan</p>
+                    </div>
+
+
+                    <div class="w-[86%]">
+                        <p class="text-lg ">squidward <span class="text-[.7rem]">26/04/2022</span></p>
+                        <!-- isi komentar -->
+                        <div class="w-full bg-slate-600 p-2 rounded-md mb-7">
+                            <p>Lorem ipsum dolor sit amet is soluta sunt earum, ratione natus debitis laudantium obcaecati asperiores.</p>
+                        </div>
+                        <!-- like & balas -->
+                        <div class="absolute bottom-0 left-14 flex">
+                            <p class="mr-14"><i id="likeComent" class=" fa-solid fa-thumbs-up fa-lg"></i><span id="jumlahLikeComent" class="text-xs"></span></p>
+                            <p>balas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+
 
             </div>
         </div>
