@@ -123,24 +123,30 @@ let tombolChat=document.getElementById('tombolChat');
 let tombolHome=document.getElementById('tombolHome');
 tombolHome.addEventListener('click',function(){
     home.classList.remove('hidden')
+    profile.classList.add('hidden')
     tombolHome.classList.remove('text-slate-400')
     tombolHome.classList.add('text-slate-50')
     tombolChat.classList.add('text-slate-400')
     tombolChat.classList.remove('text-slate-50')
     navAtas.classList.remove('hidden')
+    tombolProfile.classList.add('text-slate-400')
+    tombolProfile.classList.remove('text-slate-50')
 });
 
 
-// ---------------------------------------------------------------- chatting
+// ------------------------------------------------------------------------------------------------- chatting
 let navAtas=document.getElementById('navAtas');
 tombolChat.addEventListener('click',function(){
     home.classList.add('hidden')
     chat.classList.remove('hidden')
+    profile.classList.add('hidden')
     tombolHome.classList.add('text-slate-400')
     tombolHome.classList.remove('text-slate-50')
     tombolChat.classList.remove('text-slate-400')
     tombolChat.classList.add('text-slate-50')
     navAtas.classList.add('hidden')
+    tombolProfile.classList.add('text-slate-400')
+    tombolProfile.classList.remove('text-slate-50')
 });
 
 
@@ -162,4 +168,26 @@ let jumlahLikeComent=document.getElementById('jumlahLikeComent')
 likeComent.addEventListener('click',function(){
     likeComent.classList.toggle('text-blue-700')
     jumlahLikeComent.innerHTML++
+})
+
+
+
+
+
+
+
+
+// --------------------------------------------------- profile
+let tombolProfile=document.getElementById('tombolProfile')
+tombolProfile.addEventListener('click',function(){
+    profile.classList.remove('hidden')
+    home.classList.add('hidden')
+    chat.classList.add('hidden')
+    navAtas.classList.add('hidden')
+    tombolProfile.classList.remove('text-slate-400')
+    tombolProfile.classList.add('text-slate-50')
+    tombolHome.classList.remove('text-slate-50')
+    tombolHome.classList.add('text-slate-400')
+    tombolChat.classList.remove('text-slate-50')
+    tombolChat.classList.add('text-slate-400')
 })

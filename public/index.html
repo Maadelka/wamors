@@ -14,6 +14,9 @@
         .layout-comentar{
             box-shadow: 0 -1px 2px 1px rgba(11, 3, 52, 0.749);
         }
+        .lProfile{
+            box-shadow: 0 2px 2px 1px rgba(11, 3, 52, 0.749);
+        }
     </style>
 </head>
 <body class="h-[1390px] text-slate-200 select-none">
@@ -30,6 +33,18 @@
     </div>
 </nav>
 
+
+
+
+
+
+
+
+
+
+
+
+
 <!------------------------------------------ isi menu hamburger -->
 <div id="isiBurger" class="w-0 h-[100vh] fixed right-0 transition-all duration-200 bg-slate-700  overflow-hidden z-50">
     <div class="flex w-full items-center border-slate-500 border-b-2">
@@ -40,6 +55,23 @@
 
     <p class="py-40 text-center">comming soon</p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- navbar 2 [bagian bawah] -->
 <nav id="navBawah" class="fixed w-full p-3 bg-slate-700 bottom-0 flex justify-between z-40 tablet:hidden">
@@ -688,9 +720,59 @@
         <h1 class="text-center py-20 text-xl">layout nofitikasi</h1>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- ------------------------------------------------------------------------- profile akun -->
-    <div id="profile" class="hidden w-full bg-orange-300 min-h-max relative top-14" >
-        <h1 class="text-center py-20 text-xl">layout profile akun</h1>
+    <div id="profile" class="hidden w-full bg-slate-700  min-h-max relative " >
+        <div class="flex justify-between p-[2px] px-2 items-center lProfile">
+            <h1 class="text-xl">Profile</h1>
+            <i class="fa-solid fa-ellipsis-vertical  fa-xl"></i>
+        </div>
+        <!-- album -->
+        <div class="w-full h-40 bg-cyan-400 overflow-hidden -z-10 lProfile">
+            <img src="assets/5.jpg" class="w-full "">
+        </div>
+
+
+        <!-- profile -->
+        <div class="w-full h-40 z-20 relative flex justify-between">
+            <!-- foto profile & name & status-->
+            <div class="absolute -top-10 mx-[3px]">
+                <div class="w-20 h-20 bg-black rounded-full  overflow-hidden border-slate-900 border-2">
+                    <img src="assets/3.jpg" class="w-full">
+                </div>
+                <h1 class="font-semibold mb-2 text-xl">Andhika Rizaldi</h1>
+                <p>~ Front End Developer</p>
+                <p>~ Clasher</p>
+                <p>~ Running</p>
+            </div>
+            <div>
+                <!-- followers & friends & post -->
+                <div class=" absolute right-0">
+                    <div class="flex mb-7">
+                        <p class="px-5 pt-3"><i class="fa-regular fa-heart"></i><br><span>34M</span></p>
+                        <p class="px-5 pt-3"><i class="fa-solid fa-user-group"></i><br><span>284</span></p>
+                        <p class="px-5 pt-3"><i class="fa-regular fa-pen-to-square"></i><br><span>139</span></p>
+                    </div>
+                    <!-- add cerita -->
+                    <p class="text-center py-2 px-4 mb-2"><i class="fa-regular fa-plus"></i> tambah cerita</p>
+                    <p class="text-center py-2 px-4 "><i class="fa-regular fa-plus"></i> tambah status</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
